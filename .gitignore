@@ -1,0 +1,7 @@
+.DS_Store
+logs/
+tags
+node_modules
+dist
+
+.vercel

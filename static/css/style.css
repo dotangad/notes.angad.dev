@@ -1,0 +1,131 @@
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+* {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  * {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+body,
+html {
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+}
+
+.container {
+  min-height: calc(100vh - 100px);
+  max-width: 700px;
+  width: 100%;
+  padding: 50px;
+  margin: 0 auto;
+}
+
+pre,
+pre *,
+code {
+  font-family: "Inconsolata", monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 15px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #2977f5;
+}
+
+footer {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #ddd;
+}
+
+footer * {
+  color: #666;
+}
+
+pre {
+  background: #f0f0f0f0;
+  padding: 10px;
+  border: 1px solid #aaa;
+  font-size: 0.9rem;
+  margin: 15px 0;
+}
+
+ul,
+ol {
+  margin-left: 20px;
+}
+
+h2.timestamp {
+  font-size: 0.9rem;
+}
+
+img {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td,
+table th {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.posts .post {
+  display: flex;
+  border-top: 1px solid #ccc;
+  padding: 10px 5px;
+  display: flex;
+  align-items: center;
+}
+
+.posts .post span.date {
+  margin-right: 10px;
+  font-weight: bold;
+  font-family: "Inconsolata", monospace;
+  color: #888;
+}
+
+.posts .post:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.container > .date {
+  margin-bottom: -10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 20px;
+}

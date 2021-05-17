@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "cli-progress": "^3.9.0",
+    "draftlog": "^1.0.13",
+    "gray-matter": "^4.0.3",
+    "markdown-wasm": "^1.1.2",
+    "shelljs": "^0.8.4"
+  }
+}
