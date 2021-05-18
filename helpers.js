@@ -12,7 +12,7 @@ const PAGE_TEMPLATE = (title, date, content, rc) => `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="static/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
-    <title>${title}</title>
+    <title>${title} | Angad's Notes</title>
   </head>
   <body>
     <div class="container">
@@ -27,6 +27,7 @@ const PAGE_TEMPLATE = (title, date, content, rc) => `<!DOCTYPE html>
     <footer>
       ${rc ? `<div class="rc-scout"></div>` : ""}
       <div>&copy; <a href="https://angad.dev/">Angad Singh</a> 2021-</div>
+      <div><a href="https://github.com/dotangad/notes.angad.dev">Source available</a></div>
     </footer>
 
     ${
@@ -71,6 +72,7 @@ const INDEX_TEMPLATE = (index) => `<!DOCTYPE html>
     <footer>
       <div class="rc-scout"></div>
       <div>&copy; <a href="https://angad.dev/">Angad Singh</a> 2021-</div>
+      <div><a href="https://github.com/dotangad/notes.angad.dev">Source available</a></div>
     </footer>
 
     <script
@@ -91,9 +93,13 @@ function parseHTML(content) {
           const { date, title, filename } = args[args.length - 1];
 
           if (!title.trim()) {
-            return `<a href="/${filename}">${date}</a>`;
+            return `<a href="/${
+              path.basename(filename.replace(/\ /g, "_"), ".md") + ".html"
+            }">${date.trim()}</a>`;
           } else {
-            return `<a href="/${filename}">${title.trim()}</a>`;
+            return `<a href="/${
+              path.basename(filename.replace(/\ /g, "_"), ".md") + ".html"
+            }">${title.trim()}</a>`;
           }
         }
       )
